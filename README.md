@@ -1,97 +1,110 @@
-# ABC-Cars-Portal
+# Hello Tractor Marketplace 🚜
 
-A website application that offers a marketplace for buying and selling used
-cars. It allows users to browse a wide selection of pre-owned vehicles and
-place bids on cars they are interested in, providing them with the potential to
-purchase a vehicle at a lower price.
+Welcome to the **Hello Tractor E-commerce Hackathon**! This project focuses on building a secondary marketplace for buying and selling second-hand tractors, agricultural implements, and connecting with certified tractor operators. Let’s create innovative solutions for Africa's agricultural future! 🌍
+
+---
 
 ## Project Overview
 
-**There are 2 types of users in this Used Cars Sales portal. They are**
+This e-commerce platform is designed to connect buyers and sellers in the agricultural space. The platform supports users with the following features:
 
-1.  Users
-2.  Administrator
+### **Key Features for Users**
+1. **Register and Login**  
+   - Secure registration with email, phone, or social media verification.
+2. **Browse Tractor Listings**  
+   - View detailed listings, including photos, specifications, price, and history.
+3. **Search and Filter**  
+   - Filter listings by brand, make, model, price range, and location.
+4. **Message Sellers**  
+   - Communicate directly with sellers through an in-platform messaging system.
+5. **Book Operators**  
+   - Connect with certified tractor operators for hire.
 
-**Users should be able to perform following functions in the portal**
+### **Key Features for Sellers**
+1. **Post Listings**  
+   - Add tractor or agricultural implement listings with images, specifications, and pricing details.
+2. **Dashboard Access**  
+   - Manage listings, track inquiries, and monitor sales performance.
 
-1.  Register in the Portal
-2.  Login to the Portal
-3.  Post a Car for Sale along with Picture upload
-4.  Deactivate an Existing car sale
-5.  Update their Profile after logging in.
-6.  Book an appointment for test drive
-7.  Post the bidding price
+### **Key Features for Administrators**
+1. **Admin Dashboard**  
+   - Approve or reject new listings and monitor platform content.
+2. **User Management**  
+   - Manage user accounts and permissions.
+3. **Platform Quality Control**  
+   - Ensure all listings meet the quality and safety standards of the marketplace.
 
-**Administrators should be able to perform the following functions in the
-portal**
-
-1.  Register in the Portal
-2.  Login to the portal
-3.  View List of Registered Users
-4.  Mark a User as Administrator
-5.  Activate / Deactivate a Car post
-6.  Update their profile
-7.  Approve or deny the users appointment based on the bidding
-8.  Transact the sales if price is right
-
-**Both Users & Administrator**
-
-1.  Visit Home Page
-2.  View Car Listing
-3.  Search for a Car by Make, Model, Registration Year & Price Range
-4.  About Us Page
-5.  Contact Us Page
+---
 
 ## Technologies Used & System Requirements
 
-Backend : Java SE 11, MySQL 8, Spring Boot, Spring Security <br/>
-Frontend : JSP (Jakarta Server Page), JavaScript, Bootstrap <br/>
+- **Backend**: Java SE 11, MySQL 8, Spring Boot, Spring Security  
+- **Frontend**: JSP (Jakarta Server Pages), JavaScript, Bootstrap  
+- **Messaging System**: Integration with in-app notifications and email alerts.
 
-## HOW TO RUN
+---
 
-1. **Import Existing Project into Visual Studio Code** <br/>
-2. **Create MySQL database**
+## How to Run the Application Locally
 
+### 1. Clone the Repository  
 ```bash
-mysql> create database abc_cars
+git clone https://github.com/Hello-Tractor-Community/ht-marketplace-hackathon-the_general.git
+cd ht-marketplace-hackathon-the_general
 ```
 
-3. **Setup application.properties**
+### 2. Create the MySQL Database  
+```sql
+CREATE DATABASE hello_tractor;
+```
 
+### 3. Set Up `application.properties`  
+Configure your database connection in the `src/main/resources/application.properties` file:
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/abc_cars
+spring.datasource.url=jdbc:mysql://localhost:3306/hello_tractor
 spring.datasource.username=<YOUR_DB_USERNAME>
 spring.datasource.password=<YOUR_DB_PASSWORD>
 ```
 
-4. **Run Java Application and open [http://localhost:8080](http://localhost:8080)**
+### 4. Run the Application  
+```bash
+./mvnw spring-boot:run
+```
 
-## Screenshot
+Visit [http://localhost:8080](http://localhost:8080) in your browser.
 
-<p>Home Page</p>
-<img src="./images/home.png" alt="home_page" width="50%"/>
-<p>Login</p>
-<img src="./images/login.png" alt="login" width="50%"/>
-<p>Profile page</p>
-<img src="./images/profile.png" alt="profile" width="50%"/>
-<p>Cars Page</p>
-<img src="./images/cars.png" alt="cars" width="50%"/>
-<p>Car Detail Page</p>
-<img src="./images/car-detail.png" alt="car_detail" width="50%"/>
-<p>Post Car</p>
-<img src="./images/post-car.png" alt="post_car" width="50%"/>
-<p>Bid Car</p>
-<img src="./images/place-bid.png" alt="bid_car" width="50%"/>
-<p>Test Drive</p>
-<img src="./images/test-drive.png" alt="test_drive" width="50%"/>
-<p>Appointment</p>
-<img src="./images/appointment.png" alt="appointment" width="50%"/>
-<p>My Posted Car</p>
-<img src="./images/my-posted-car.png" alt="my_posted_car" width="50%"/>
-<p>About Page</p>
-<img src="./images/about.png" alt="about" width="50%"/>
-<p>Contact Page</p>
-<img src="./images/contact.png" alt="contact" width="50%"/>
-<p>Admin Pages</p>
-<img src="./images/admin.png" alt="admin" width="50%"/>
-<img src="./images/admin2.png" alt="admin" width="50%"/>
+---
+
+## Deliverables Checklist ✅
+
+1. **Codebase**  
+   - Modular, well-structured, and fully documented codebase.
+
+2. **Demo Video**  
+   - Link: [Insert your video link here]
+
+3. **Live Application**  
+   - Deployed on [Insert Deployment Platform (e.g., Netlify, Vercel, AWS)]  
+   - URL: [Insert live application URL here]
+
+4. **Technical Documentation**  
+   - Setup instructions, architecture diagrams, and design flowcharts are included in the `docs/` folder.
+
+5. **Project Report**  
+   - Key details about the project, including team members, tech stack, and challenges.
+
+---
+
+## Screenshot Highlights
+
+| Feature                | Screenshot                                   |
+|------------------------|---------------------------------------------|
+| Homepage               | ![Homepage](./images/homepage.png)         |
+| Registration Page      | ![Registration](./images/registration.png) |
+| Tractor Listings       | ![Listings](./images/listings.png)         |
+| Messaging System       | ![Messages](./images/messages.png)         |
+| Admin Panel            | ![Admin Panel](./images/admin-panel.png)   |
+
+---
+
+## Contact & Support  
+For any inquiries, reach out via [Discord](#) or refer to the official Hello Tractor documentation. Good luck and happy hacking! 🚀
