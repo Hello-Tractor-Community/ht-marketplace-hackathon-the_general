@@ -52,7 +52,7 @@ git clone https://github.com/Hello-Tractor-Community/ht-marketplace-hackathon-th
 cd ht-marketplace-hackathon-the_general
 ```
 
-### 2. Create the MySQL Database  
+### 2. Create the Postgre or mysql Database  
 ```sql
 CREATE DATABASE hello_tractor;
 ```
@@ -60,9 +60,14 @@ CREATE DATABASE hello_tractor;
 ### 3. Set Up `application.properties`  
 Configure your database connection in the `src/main/resources/application.properties` file:
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/hello_tractor
-spring.datasource.username=<YOUR_DB_USERNAME>
-spring.datasource.password=<YOUR_DB_PASSWORD>
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://localhost:5432/HelloTractors
+spring.datasource.username=your-username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.hikari.auto-commit=false
 ```
 
 ### 4. Run the Application  
@@ -80,7 +85,7 @@ Visit [http://localhost:8080](http://localhost:8080) in your browser.
    - Modular, well-structured, and fully documented codebase.
 
 2. **Demo Video**  
-   - Link: [Insert your video link here]
+   - Link: [https://youtu.be/hkiQhCpaHsI?si=AHNeLfoxBfYXGr0B]
 
 3. **Live Application**  
    - Deployed on [Insert Deployment Platform (e.g., Netlify, Vercel, AWS)]  
@@ -94,15 +99,6 @@ Visit [http://localhost:8080](http://localhost:8080) in your browser.
 
 ---
 
-## Screenshot Highlights
-
-| Feature                | Screenshot                                   |
-|------------------------|---------------------------------------------|
-| Homepage               | ![Homepage](./images/homepage.png)         |
-| Registration Page      | ![Registration](./images/registration.png) |
-| Tractor Listings       | ![Listings](./images/listings.png)         |
-| Messaging System       | ![Messages](./images/messages.png)         |
-| Admin Panel            | ![Admin Panel](./images/admin-panel.png)   |
 
 ---
 
